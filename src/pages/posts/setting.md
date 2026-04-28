@@ -29,3 +29,11 @@ bun x astro add tailwind
 프런트매터에 `import '../styles/global.css'` 를 추가해서 써야한다
 
 
+
+
+- pages
+- components
+- layouts
+- [tag].astro 
+- getStaticPaths
+
