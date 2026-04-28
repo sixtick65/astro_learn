@@ -1,19 +1,43 @@
 ---
+// 서버 사이드 영역
+// 빌드시점이나 서버에서 렌더링 될 때 딱 한번 실행됨
+const pageTitle = "About Me";
+console.log(pageTitle);
 
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <h1>About Us</h1>
-    <p>Welcome to our website! We are dedicated to providing you with the best content and resources.</p>
+    <h1>{pageTitle}</h1>
+    <p>Here are a few facts about me:</p>
+<ul>
+  <li>My name is {identity.firstName}.</li>
+  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+  {identity.hobbies.length >= 2 &&
+    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+  }
+</ul>
+<p>My skills are:</p>
+<ul>
+  {skills.map((skill) => <li>{skill}</li>)}
+</ul>
+    <p>{'{'}Welcome to our website! We are dedicated to providing you with the best content and resources.</p>
     <p>Our team is passionate about sharing knowledge and helping others grow. We believe in the power of community and collaboration.</p>
     <p>Thank you for visiting our site, and we hope you find what you're looking for!</p>
   </body>

@@ -1,20 +1,23 @@
 ---
-
+const pageTitle = "Blog";
+console.log(pageTitle);
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <h1>Blog Us</h1>
-    <p>Welcome to our website! We are dedicated to providing you with the best content and resources.</p>
-    <p>Our team is passionate about sharing knowledge and helping others grow. We believe in the power of community and collaboration.</p>
-    <p>Thank you for visiting our site, and we hope you find what you're looking for!</p>
+    <h1>{pageTitle}</h1>
+    <ul>
+      <li><a href="/posts/1/">Post 1</a></li>
+      <li><a href="/posts/2/">Post 2</a></li>
+      <li><a href="/posts/3/">Post 3</a></li>
+    </ul>
   </body>
 </html>
