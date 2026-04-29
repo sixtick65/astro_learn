@@ -49,6 +49,7 @@ export async function GET(context) {
   });
 }
 ```
+- astro.config.mjs 에 site 를 지정해야 한다
 
 
 - pages
