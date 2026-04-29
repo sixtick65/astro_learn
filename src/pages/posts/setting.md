@@ -36,4 +36,5 @@ bun x astro add tailwind
 - layouts
 - [tag].astro 
 - getStaticPaths
+- const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
