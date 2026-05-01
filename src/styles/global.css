@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@keyframes vibrate {
+  0% { transform: scale(1); }
+  25% { transform: scale(0.8); }  /* 팍 줄어듦 */
+  50% { transform: scale(1.1); }  /* 커짐 */
+  75% { transform: scale(0.9); }  /* 반쯤 줄어듦 */
+  100% { transform: scale(1); }   /* 원복 */
+}
 
 @layer base {
   body {
@@ -39,10 +46,17 @@
     color: white;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
+      /* transform 0.1s ease-in-out; */
   }
 
   .btn:hover {
     background-color: #005f99;
+    cursor: pointer;
+  }
+
+  .btn:active {
+    /* transform: scale(0.9); */
+    animation: vibrate 0.1s ease-in-out;
   }
 }

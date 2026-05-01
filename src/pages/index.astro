@@ -1,4 +1,5 @@
 ---
+import Greeting from '@/components/Greeting';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,4 +8,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout pageTitle="Home Page!!">
   <h1>Welcome to Astro!</h1>
+  <Greeting client:visible messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 </BaseLayout>

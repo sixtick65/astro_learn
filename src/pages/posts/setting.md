@@ -52,6 +52,20 @@ export async function GET(context) {
 - astro.config.mjs 에 site 를 지정해야 한다
 
 
+## 아일랜드
+### preact 추가
+```
+bun x astro add preact --yes
+```
+- 경량 astro react
+- bun add @astrojs/preact@^5.1.2 preact@^10.29.1 가 깔리며 설정을 수정해준다
+
+### preact 사용
+-  확장자 .jsx 를 사용한다
+- client 지시어를 사용한다 (load, idle, visible, media, only)
+
+
+
 - pages
 - components
 - layouts
